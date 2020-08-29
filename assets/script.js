@@ -4,8 +4,7 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const recordHighScorebutton = document.getElementById('recordHighScore')
-
-let shuffleQuestions, currentQuestionIndex
+const highscoreEl = document.getElementById('highscore-container')
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -13,12 +12,14 @@ nextButton.addEventListener('click', () => {
     setNextQuestion()
 })
 
+//  After clicking Start Game Button.
 function startGame() {
     startButton.classList.add('hide')
     recordHighScorebutton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
+    highscoreEl.classList.remove('hide')
     setNextQuestion()
 }
 
@@ -61,7 +62,9 @@ function selectAnswer(e) {
     } else {
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
+         
     } 
+    
 }
 
 function setStatusClass(element, correct) {
@@ -78,9 +81,18 @@ function clearStatusClass(element) {
     element.classList.remove('wrong')
   }
 
+  // add function to record high score
+function recordHighScore(element) {
+    startButton.innerText = 'recordHighScore'
+    startButton.classList.remove('hide')
+
+}
+
+
 // // add High Score to High Score section
 //     document.getElementById("lastPasswords").innerHTML += password + "<br />";
 
+// add timer to count down and subtract time when wrong
 function timer001(){
     c = c - 1;
     if (c < 20) {
