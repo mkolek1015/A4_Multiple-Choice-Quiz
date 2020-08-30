@@ -6,21 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link href="./assets/style.css" rel="stylesheet">
-  <script defer src="./assets/script2.js"></script>
+  
 </head>
 <body>
+    
+    <button id="bgnBtn" onclick=setTimeout(promptMe,1500)>Start Game</button>
     <div class="container">
         <div id="score-container" class="hide">
         <div id="Score">Your Score</div>
         <text>Score: <text id="score001">0</text></text><br/>
         <text>Time: <text id="time001">200</text></text><br/>
-        <text>-HIGH SCORES- <text id="highScore"></text></text><br/>
+        <text>-HIGH SCORES- <text id="highScore"></text></text><br/> 
+    </div>
+
+    <div class="highScore">
+        <b>HIGH SCORE</b>
+        <br />
+        <div id="high_Scores"></div>
+
+
+    </div>
+
+
+
+        
         
 
 
-
-
-
+<script defer src="./assets/script2.js"></script>
 
 </body>
 </html>

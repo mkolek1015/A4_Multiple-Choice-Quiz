@@ -6,3 +6,33 @@
     padding: 10px;
     box-shadow: 0 0 10px 2px;
 }
+
+#frame001 {
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid black;
+    height: 350px;
+    width: 400px;
+}
+
+.buttons001 {
+     background-color: dodgerblue;
+    color: white;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.buttons002 {
+    background-color: blue;
+    color: white;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#font001 {
+    text-align: center;
+    font-size: large;
+    color: black;
+}

@@ -1,24 +1,43 @@
 
+// Start Quiz button to start prompts
+function promptMe(){
+    var userAdjective = prompt("GOOD LUCK!");
+    alert (questions);
+}
+
+// possible prompt to start quiz.
+// var myButtonHtml = document.getElementById('MyButton');
+// myButtonHtml.addEventListener('click', function() {
+//   // When button is clicked.. now prompt the user
+//   var usersResponse = prompt("What does html stand for");
+// });
+
+
 // Possible Timer function
-window.onload = function() {
-    var display = document.querySelector('#time'),
-     timer = new CountDownTimer(5),
-     timeObj = CountDownTimer.parse(5);
-    
-    format(timeObj.minutes, timeObj.seconds);
-    
-    timer.onTick(format);
-    
-    document.querySelector('button').addEventListener('click', function() {
-     timer.start();
-    });
-    
-    function format(minutes, seconds) {
-     minutes = minutes < 10 ? "0" + minutes : minutes;
-     seconds = seconds < 10 ? "0" + seconds : seconds;
-     display.textContent = minutes + ':' + seconds;
-    }
-};
+function timeDown() {
+    timer = 60;
+    var interval = setInterval(function () {
+      document.getElementById("timer").innerHTML = timer;
+      timer--;
+      timerText.innerText = timer;
+      if (timer === 0) {
+        clearInterval(interval);
+        localStorage.setItem("lastQuizScore", score);
+        return window.location.assign("end.html");
+      }
+    }, 1000);
+  }
+
+
+// points creator for score
+function scoreUp(num) {
+    score += num;
+    scoreText.innerText = score;
+  } 
+
+//add Score to High Score section
+
+
 
 // Quiz questions
 var questions = [
