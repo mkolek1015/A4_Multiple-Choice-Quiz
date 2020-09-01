@@ -5,37 +5,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link href="./assets/style.css" rel="stylesheet">
+  <link href="./assests/style.css" rel="stylesheet">
   
 </head>
 <body>
-    
-    <button id="bgnBtn" onclick=setTimeout(promptMe,1500)>Start Game</button>
-    <div class="container">
-        <div id="score-container" class="hide">
-        <div id="Score">Your Score</div>
-        <text>Score: <text id="score001">0</text></text><br/>
-        <text>Time: <text id="time001">200</text></text><br/>
-        <text>-HIGH SCORES- <text id="highScore"></text></text><br/> 
+   <!-- Start header -->
+   <nav class="navbar navbar-expand-md fixed-top">
+    <div class="container-fluid">
+          <div id="highscore" class="nav-item nav-link"> View High Scores</div>
+          <h1 id="navbar-title">Timed Quiz Game</h1>
+          <table id=timers style="visibility: hidden;">
+            <tr>
+              <td> Time left in Game: </td>
+              <td> <span id="gameTimer" class="nav-item"></span> </td>
+            </tr>
+             <tr>
+              <td>Time left for Question:</td>
+              <td> <span id="quesTimer" class="nav-item"></span> </td>
+            </tr>
+          </table>
+      </div>
     </div>
+  </nav>
+  <!-- end header -->
+  <!-- start Content -->
+  <div class="container-fluid">
+    <!-- need a place for the intro instructions and quiz -->
+    <section id="details"> </section>
+  </div>    
+<!-- End Content -->
 
-    <div class="highScore">
-        <b>HIGH SCORE</b>
-        <br />
-        <div id="high_Scores"></div>
-
-
-    </div>
-
-
-
-        
-        
-
-
-<script defer src="./assets/script2.js"></script>
-
+  <!-- read in file containing questions for quiz -->
+  <script src='./assests/questions.js'></script>
+  <!-- read in javascript file  -->
+  <script src='./assests/script.js'></script>
 </body>
 </html>
-
-   
